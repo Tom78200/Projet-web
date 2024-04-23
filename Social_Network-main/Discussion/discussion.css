@@ -1,0 +1,104 @@
+#container {
+	width:40%;
+	height:100%;
+	margin:auto;
+	box-shadow:4px 4px 5px 4px rgba(0, 128, 0, 0.3); /* Vert */
+}
+
+#banner {
+	background:rgba(0, 128, 0, 0.1); /* Vert */
+	height:80px;
+}
+
+#left-arrow {
+	display:inline-block;
+	width:80px;
+	height:80px;
+	background:url('left-arrow.png') no-repeat top left;
+	background-size:80px;
+	vertical-align:middle;
+}
+
+#titre {
+	display:inline-block;
+	width: calc(100% - (80px)*2); /* Le bloc est parfaitement centré. Avec 80px à gauche et de même à droite. */
+	text-align:center;
+	vertical-align:middle;
+}
+
+#scroll {
+	display:flex;
+	height:75vh; /* Environ 75% de la largeur du bloc parent */
+	overflow-y:auto; /* On affiche une barre pour scroller verticalement si besoin */
+	overflow-x:hidden; /* On cache la barre de scroll horizontale */
+	flex-direction:column; /* On place tous les blocs enfants en colonne */
+}
+
+#no-message {
+	text-align:center;
+}
+
+.containerMsg {
+	width:100%;
+	padding:8px;
+}
+
+.senderMsg {
+	display:block;
+	text-align:left;
+	float:right;
+	position:relative;
+	max-width:70%;
+	margin-right:10px;
+	padding-left:10px;
+	padding-right:10px;
+	border-radius:20px;
+	word-break: break-word;
+	background:rgb(0, 128, 0); /* Vert */
+	color:white;
+	transition:background-color 0.3s;
+}
+
+.senderMsg:hover {
+	background:rgb(0, 75, 6);	
+	cursor:pointer;
+}
+
+.recipientMsg {
+	display:block;
+	text-align:left;
+	float:left;
+	max-width:70%;
+	padding-left:10px;
+	padding-right:10px;
+	border-radius:20px;
+	word-break: break-word;
+	background:rgb(0, 128, 0); /* Vert */
+	color:white;
+}
+
+#msg-form {
+	text-align:center;
+}
+
+#message {
+	display:inline-block;
+	width:70%;
+	border-radius:20px; /* coins arrondis */
+	padding-left:10px; /* Important. Sinon les premières lettres sont "mangées" par le coin supérieur gauche */
+	box-shadow:2px 5px 5px grey; /* ombre grise sous l'élément */
+	outline:none; /* Enlève le contour noir lors de la sélection de l'élément */
+}
+
+#send_button{
+	width:45px;
+	height:45px;
+	background: url('send-icon.png') no-repeat top left;
+	background-size:45px;
+	transition:background 0.1s; /* Petit effet de transition sur le bouton */
+}
+
+#send_button:hover {
+	background-image:url('send-icon-2.png'); /* On met l'autre image du bouton. Celle qui est bleue */
+}
+

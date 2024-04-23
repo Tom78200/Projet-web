@@ -1,0 +1,95 @@
+nav {
+    display: flex;
+    flex-direction: line;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    position: fixed;
+    bottom: 0; /* Placer la barre en bas */
+    left: 50%; /* Centrer horizontalement */
+    transform: translateX(-50%); /* Centrer horizontalement */
+    width: 100%; /* Prend toute la largeur de la fenêtre */
+    background-color: #f0f0f0; /* couleur de fond */
+}
+
+#bar {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#deco-reco {
+    width: 25%;
+}
+
+#deco-reco a {
+    float: right;
+}
+
+/* Effet de soulignement */
+.BoutonNoCurrent {
+    display: inline-block;
+    height: 50px;
+    width: 150px;
+    line-height: 44px;
+    margin-right: 10px;
+    text-align: center;
+    /* Crée un dégradé de vert. Permet de faire une ligne en bas et transparent en haut */
+    background: linear-gradient(to top, green 0px, green 5px, transparent 5px) no-repeat;
+    /* On cache l'arrière-plan, et donc le soulignement */
+    background-size: 0 100%;
+    /* On met une transition pour que le soulignement se fasse en 0.3s */
+    transition: background-size 0.3s;
+}
+
+.icon {
+    display: inline-block;
+    width: 35px;
+    vertical-align: middle; /* On centre l'icône verticalement */
+    margin: auto; /* On centre horizontalement */
+    margin-top: -5px; /* On centre l'image (en enlevant les 5px du soulignement) */
+}
+
+.BoutonNoCurrent:hover {
+    background-size: 100% 100%; /* Remet le fond, et crée un effet de soulignement */
+}
+
+.BoutonNoCurrent:active {
+    height: 44px;
+    width: 150px;
+    background: rgba(0, 0, 0, 0.2); /* Fond légèrement transparent lors du clic */
+    border-radius: 5px;
+}
+
+/* Style du bouton de navigation actif */
+.BoutonCurrent {
+    display: inline-block;
+    line-height: 44px;
+    height: 50px;
+    width: 150px;
+    margin-right: 10px;
+    text-align: center;
+    border: none;
+    background: linear-gradient(to top, green 0px, green 5px, transparent 5px) no-repeat;
+    background-size: 100% 100%;
+}
+
+.deconnexion-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #276b00; /* couleur de fond */
+    color: white; /* couleur du texte */
+    text-decoration: none; /* supprimer le soulignement du lien */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.deconnexion-btn:hover {
+    background-color: #276b00; /* couleur de fond au survol */
+}
+
+.deconnexion-btn:active {
+    background-color: #276b00; /* couleur de fond au clic */
+}
